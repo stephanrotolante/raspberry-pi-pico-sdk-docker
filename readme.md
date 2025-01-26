@@ -1,6 +1,6 @@
 ### Docker and Raspberry Pi Pico
 
-This repo designed to get the raspberry pi pico sdk setup on your system through Docker. 
+This repo is designed to get the raspberry pi pico sdk setup on your system through Docker. 
 
 The Docker container is going to install all the necessary build tools to compile your raspbery pi pico C/C++ project. 
 
