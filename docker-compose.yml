@@ -1,0 +1,8 @@
+services:
+  pico-build:
+    container_name:  pico-sdk-build-container
+    build:
+      context: .
+      dockerfile: Dockerfile.PicoSdk
+    volumes:
+      - ./example:/app

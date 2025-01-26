@@ -1,0 +1,18 @@
+FROM debian:12.9-slim
+
+RUN apt update
+RUN apt install -y cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib wget git
+
+
+RUN git clone https://github.com/raspberrypi/pico-sdk.git sdk
+
+WORKDIR /sdk
+RUN git checkout 2.1.0
+RUN git submodule update --init
+
+ENV PICO_SDK_PATH=/sdk
+
+
+WORKDIR /app
+
+CMD [ "tail", "-f" , "/dev/null" ]
