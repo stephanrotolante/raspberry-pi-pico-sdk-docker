@@ -1,7 +1,19 @@
 #!/bin/bash
 
+# Usage check
+if [ -z "$1" ]; then
+  echo "Usage: $0 <filename.uf2>"
+  exit 1
+fi
+
 # Set the path to the .uf2 file
 FILE="build/$1"
+
+# Check if the file exists
+if [ ! -f "$FILE" ]; then
+  echo "Error: File '$FILE' not found."
+  exit 1
+fi
 
 # Find the Pico's mount point
 PICO_MOUNT=$(df -h | grep RPI-RP2 | awk '{print $NF}')
