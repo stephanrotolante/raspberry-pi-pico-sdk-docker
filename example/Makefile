@@ -1,4 +1,4 @@
-.PHONY: build clean
+.PHONY: build clean format
 
 BOARD ?= pico2 # pico_w
 
