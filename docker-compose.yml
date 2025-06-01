@@ -1,8 +1,12 @@
 services:
   pico-build:
-    container_name:  pico-sdk-build-container
+    container_name: pico-sdk-build-container
     build:
       context: .
       dockerfile: Dockerfile.PicoSdk
+      args:
+        USERNAME: stephan
+        USER_UID: 1000
+        USER_GID: 1000
     volumes:
-      - ./example:/app
+      - ./:/app

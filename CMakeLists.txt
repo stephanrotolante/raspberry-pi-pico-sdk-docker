@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.13...3.27)
 
-include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
+set(ENV{PICO_SDK_PATH} "${CMAKE_SOURCE_DIR}")
+include($ENV{PICO_SDK_PATH}/deps/pico-sdk/pico_sdk_init.cmake)
 
 project(example_project)
 
