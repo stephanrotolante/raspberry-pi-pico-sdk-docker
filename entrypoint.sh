@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # mount files on host machine after container starts up
-cp -r /deps/* /app/deps/
+rm -rf /app/deps
+cp -r /deps/ /app/
 
 tail -f /dev/null
