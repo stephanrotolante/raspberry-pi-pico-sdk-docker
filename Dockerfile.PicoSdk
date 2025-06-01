@@ -5,9 +5,8 @@ RUN apt install -y cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm
 
 WORKDIR /deps
 
-RUN git clone https://github.com/raspberrypi/pico-sdk.git
+RUN git clone --branch 2.1.0 --depth 1 https://github.com/raspberrypi/pico-sdk.git
 RUN cd pico-sdk \
-    && git checkout 2.1.0 \
     && git submodule update --init
 ENV PICO_SDK_PATH=/pico-sdk
 
